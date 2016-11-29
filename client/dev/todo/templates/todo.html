@@ -1,0 +1,32 @@
+<div class="todo-container">
+  <form class="todo-form"
+        (submit)="add(todoForm.todoMessage)">
+
+    <h1 class="todo-title">{{title}}</h1>
+
+    <input type="text"
+           name="todoMessage"
+           [(ngModel)]="todoForm.todoMessage"
+           [class.todo-error]="!todoForm.todoMessage.length"
+           placeholder="What do you have todo?"
+           autofocus />
+
+    <button type="submit"
+            [disabled]="!todoForm.todoMessage.length">+</button>
+  </form>
+
+  <div class="todo-list">
+    <div *ngFor="let todo of todos;"
+         class="todo-item"
+         (click)="remove(todo._id);">
+      <p>{{todo.todoMessage}}</p>
+    </div>
+  </div>
+</div>
+<md-card>
+  <md-card-actions>
+    <button md-mini-fab color="primary">LIKE</button>
+    <button md-fab>SHARE</button>
+  </md-card-actions>
+</md-card>
+<button md-button>ads</button>
