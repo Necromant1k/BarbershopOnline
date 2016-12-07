@@ -3,8 +3,10 @@ import { HttpModule } from '@angular/http';
 import { FormsModule, FormBuilder } from '@angular/forms';
 import { BrowserModule  } from '@angular/platform-browser';
 import { MaterialModule } from '@angular/material';
+
 import { TodoCmp }   from './todo/components/todo-cmp';
 import { TodoService }   from './todo/services/todo-service';
+import { NavbarComponent } from "./components/navbar/navbar.component";
 
 @NgModule({
     imports: [
@@ -15,12 +17,13 @@ import { TodoService }   from './todo/services/todo-service';
     ],
    declarations: [
       TodoCmp,
+      NavbarComponent
     ],
     providers: [
       TodoService,
     ],
     bootstrap: [
-      TodoCmp,
+      NavbarComponent,
     ],
 })
 export class AppModule {}

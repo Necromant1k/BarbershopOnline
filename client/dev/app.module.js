@@ -15,6 +15,7 @@ var platform_browser_1 = require('@angular/platform-browser');
 var material_1 = require('@angular/material');
 var todo_cmp_1 = require('./todo/components/todo-cmp');
 var todo_service_1 = require('./todo/services/todo-service');
+var navbar_component_1 = require("./components/navbar/navbar.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -28,12 +29,13 @@ var AppModule = (function () {
             ],
             declarations: [
                 todo_cmp_1.TodoCmp,
+                navbar_component_1.NavbarComponent
             ],
             providers: [
                 todo_service_1.TodoService,
             ],
             bootstrap: [
-                todo_cmp_1.TodoCmp,
+                navbar_component_1.NavbarComponent,
             ],
         }), 
         __metadata('design:paramtypes', [])
