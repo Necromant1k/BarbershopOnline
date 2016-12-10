@@ -10,11 +10,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var angular2_jwt_1 = require('angular2-jwt');
+var auth_options_1 = require('./auth.options');
 var Auth = (function () {
     function Auth() {
         var _this = this;
         //configure Auth0
-        this.lock = new Auth0Lock('antKbpBh3LPrr8I1Iypcft0GWC5ice3W', 'necromant1k.eu.auth0.com', {});
+        this.lock = new Auth0Lock('antKbpBh3LPrr8I1Iypcft0GWC5ice3W', 'necromant1k.eu.auth0.com', auth_options_1.options);
         // Add callback for lock `authenticated` event
         this.lock.on("authenticated", function (authResult) {
             _this.lock.getProfile(authResult.idToken, function (err, profile) {
