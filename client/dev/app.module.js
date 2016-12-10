@@ -16,6 +16,7 @@ var material_1 = require('@angular/material');
 var angular2_jwt_1 = require('angular2-jwt');
 var app_routing_1 = require('./app.routing');
 var auth_service_1 = require('./oauth/auth.service');
+var auth_guard_1 = require('./oauth/auth.guard');
 var app_component_1 = require('./app.component');
 var todo_cmp_1 = require('./todo/components/todo-cmp');
 var todo_service_1 = require('./todo/services/todo-service');
@@ -42,7 +43,8 @@ var AppModule = (function () {
             providers: [
                 todo_service_1.TodoService,
                 angular2_jwt_1.AUTH_PROVIDERS,
-                auth_service_1.Auth
+                auth_service_1.Auth,
+                auth_guard_1.AuthGuard
             ],
             bootstrap: [
                 app_component_1.AppComponent

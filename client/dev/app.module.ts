@@ -6,7 +6,8 @@ import { MaterialModule } from '@angular/material';
 import {AUTH_PROVIDERS} from 'angular2-jwt';
 import {routing} from './app.routing';
 
-import {Auth} from './oauth/auth.service';
+import { Auth } from './oauth/auth.service';
+import { AuthGuard } from './oauth/auth.guard';
 
 import { AppComponent } from './app.component'
 import { TodoCmp }   from './todo/components/todo-cmp';
@@ -31,7 +32,8 @@ import { ProfileComponent } from "./components/profile/profile.component";
     providers: [
       TodoService,
       AUTH_PROVIDERS,
-      Auth
+      Auth,
+      AuthGuard
 
     ],
     bootstrap: [

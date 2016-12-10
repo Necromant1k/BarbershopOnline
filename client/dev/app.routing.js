@@ -1,5 +1,6 @@
 "use strict";
 var router_1 = require('@angular/router');
+var auth_guard_1 = require("./oauth/auth.guard");
 var todo_cmp_1 = require("./todo/components/todo-cmp");
 var profile_component_1 = require("./components/profile/profile.component");
 var appRoutes = [
@@ -9,7 +10,8 @@ var appRoutes = [
     },
     {
         path: 'profile',
-        component: profile_component_1.ProfileComponent
+        component: profile_component_1.ProfileComponent,
+        canActivate: [auth_guard_1.AuthGuard]
     }
 ];
 exports.routing = router_1.RouterModule.forRoot(appRoutes);
