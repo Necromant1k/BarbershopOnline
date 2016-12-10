@@ -13,9 +13,11 @@ var http_1 = require('@angular/http');
 var forms_1 = require('@angular/forms');
 var platform_browser_1 = require('@angular/platform-browser');
 var material_1 = require('@angular/material');
+var app_component_1 = require('./app.component');
 var todo_cmp_1 = require('./todo/components/todo-cmp');
 var todo_service_1 = require('./todo/services/todo-service');
 var navbar_component_1 = require("./components/navbar/navbar.component");
+var app_routing_1 = require('./app.routing');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -23,11 +25,13 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
+                app_routing_1.routing,
                 forms_1.FormsModule,
                 http_1.HttpModule,
                 material_1.MaterialModule
             ],
             declarations: [
+                app_component_1.AppComponent,
                 todo_cmp_1.TodoCmp,
                 navbar_component_1.NavbarComponent
             ],
@@ -35,7 +39,7 @@ var AppModule = (function () {
                 todo_service_1.TodoService,
             ],
             bootstrap: [
-                navbar_component_1.NavbarComponent,
+                app_component_1.AppComponent
             ],
         }), 
         __metadata('design:paramtypes', [])
