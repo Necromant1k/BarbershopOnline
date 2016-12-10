@@ -22,6 +22,7 @@ export const tasks = {
 
   CLIENT_RELOAD: 'client.reload',
 
+  CLIENT_BUILD_SCSS: 'client.build_scss',
   CLIENT_WATCH: 'client.watch',
 
   CLIENT_BUILD_TS: 'client.build_ts'
