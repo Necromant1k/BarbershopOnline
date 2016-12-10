@@ -21,6 +21,20 @@ System.config({
 
     // other libraries
     'rxjs':                       'npm:rxjs',
-    '@angular/material': 'npm:@angular/material/material.umd.js'
+    '@angular/material':          'npm:@angular/material/material.umd.js',
+    'angular2-jwt': 'npm:angular2-jwt/angular2-jwt.js'
+
+  },
+  packages: {
+    app: {
+      main: './index.js',
+      defaultExtension: 'js'
+    },
+    rxjs: {
+      defaultExtension: 'js'
+    },
+    'angular2-jwt': {
+      defaultExtension: 'js'
+    }
   }
 });

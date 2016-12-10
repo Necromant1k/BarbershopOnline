@@ -10,18 +10,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var auth_service_1 = require('../../oauth/auth.service');
-var NavbarComponent = (function () {
-    function NavbarComponent(auth) {
+var ProfileComponent = (function () {
+    function ProfileComponent(auth) {
         this.auth = auth;
+        this.profile = JSON.parse(localStorage.getItem('profile'));
+        console.log(this.profile);
     }
-    NavbarComponent = __decorate([
+    ProfileComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'navbar',
-            templateUrl: 'navbar.component.html'
+            selector: 'profile',
+            templateUrl: 'profile.component.html'
         }), 
         __metadata('design:paramtypes', [auth_service_1.Auth])
-    ], NavbarComponent);
-    return NavbarComponent;
+    ], ProfileComponent);
+    return ProfileComponent;
 }());
-exports.NavbarComponent = NavbarComponent;
+exports.ProfileComponent = ProfileComponent;

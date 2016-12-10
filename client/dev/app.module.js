@@ -13,11 +13,14 @@ var http_1 = require('@angular/http');
 var forms_1 = require('@angular/forms');
 var platform_browser_1 = require('@angular/platform-browser');
 var material_1 = require('@angular/material');
+var angular2_jwt_1 = require('angular2-jwt');
+var app_routing_1 = require('./app.routing');
+var auth_service_1 = require('./oauth/auth.service');
 var app_component_1 = require('./app.component');
 var todo_cmp_1 = require('./todo/components/todo-cmp');
 var todo_service_1 = require('./todo/services/todo-service');
 var navbar_component_1 = require("./components/navbar/navbar.component");
-var app_routing_1 = require('./app.routing');
+var profile_component_1 = require("./components/profile/profile.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -33,10 +36,13 @@ var AppModule = (function () {
             declarations: [
                 app_component_1.AppComponent,
                 todo_cmp_1.TodoCmp,
-                navbar_component_1.NavbarComponent
+                navbar_component_1.NavbarComponent,
+                profile_component_1.ProfileComponent
             ],
             providers: [
                 todo_service_1.TodoService,
+                angular2_jwt_1.AUTH_PROVIDERS,
+                auth_service_1.Auth
             ],
             bootstrap: [
                 app_component_1.AppComponent
