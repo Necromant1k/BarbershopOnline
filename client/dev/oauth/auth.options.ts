@@ -1,3 +1,4 @@
 export const options = {
-  language: 'ru'
+  language: 'ru',
+
 };

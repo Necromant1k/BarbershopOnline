@@ -14,6 +14,9 @@ import { TodoCmp }   from './todo/components/todo-cmp';
 import { TodoService }   from './todo/services/todo-service';
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { ProfileComponent } from "./components/profile/profile.component";
+import { SaloonComponent } from './components/saloon/saloon.component';
+import { SaloonService } from './services/saloon/saloon.service';
+import { SingleSaloonComponent} from './components/single.saloon/saloonSingle.component';
 
 @NgModule({
     imports: [
@@ -27,13 +30,16 @@ import { ProfileComponent } from "./components/profile/profile.component";
       AppComponent,
       TodoCmp,
       NavbarComponent,
-      ProfileComponent
+      ProfileComponent,
+      SaloonComponent,
+      SingleSaloonComponent
     ],
     providers: [
       TodoService,
       AUTH_PROVIDERS,
       Auth,
-      AuthGuard
+      AuthGuard,
+      SaloonService
 
     ],
     bootstrap: [

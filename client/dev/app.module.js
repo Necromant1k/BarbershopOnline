@@ -22,6 +22,9 @@ var todo_cmp_1 = require('./todo/components/todo-cmp');
 var todo_service_1 = require('./todo/services/todo-service');
 var navbar_component_1 = require("./components/navbar/navbar.component");
 var profile_component_1 = require("./components/profile/profile.component");
+var saloon_component_1 = require('./components/saloon/saloon.component');
+var saloon_service_1 = require('./services/saloon/saloon.service');
+var saloonSingle_component_1 = require('./components/single.saloon/saloonSingle.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -38,13 +41,16 @@ var AppModule = (function () {
                 app_component_1.AppComponent,
                 todo_cmp_1.TodoCmp,
                 navbar_component_1.NavbarComponent,
-                profile_component_1.ProfileComponent
+                profile_component_1.ProfileComponent,
+                saloon_component_1.SaloonComponent,
+                saloonSingle_component_1.SingleSaloonComponent
             ],
             providers: [
                 todo_service_1.TodoService,
                 angular2_jwt_1.AUTH_PROVIDERS,
                 auth_service_1.Auth,
-                auth_guard_1.AuthGuard
+                auth_guard_1.AuthGuard,
+                saloon_service_1.SaloonService
             ],
             bootstrap: [
                 app_component_1.AppComponent

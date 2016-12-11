@@ -6,17 +6,17 @@ const TS = path.DEV + '**/*.ts';
 const CSS = path.DEV + '**/*.css';
 const HTML = path.DEV + '**/*.html';
 
+
 gulp.task(tasks.CLIENT_RELOAD, () => {
   return browserSync.reload();
 });
 
-gulp.task(tasks.CLIENT_WATCH, [tasks.CLIENT_BUILD_TS], () => {
-  
-  browserSync({proxy: "http://localhost:3333", reloadDelay: 1000});
-  
+gulp.task(tasks.CLIENT_WATCH,[tasks.CLIENT_BUILD_TS], () => {
+
+  browserSync({proxy: "http://localhost:3333", reloadDelay: 100});
+
 
   let _watchable = [];
-
   _watchable.push(TS);
   _watchable.push(CSS);
   _watchable.push(HTML);

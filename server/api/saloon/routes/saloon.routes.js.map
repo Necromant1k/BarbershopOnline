@@ -1,1 +1,1 @@
-{"version":3,"file":"saloon.routes.js","sourceRoot":"","sources":["saloon.routes.ts"],"names":[],"mappings":""}
+{"version":3,"file":"saloon.routes.js","sourceRoot":"","sources":["saloon.routes.ts"],"names":[],"mappings":"AAAA,YAAY,CAAC;AAGb,kCAA+B,iCAAiC,CAAC,CAAA;AAEjE;IAAA;IAUA,CAAC;IATQ,iBAAI,GAAX,UAAY,MAAsB;QAChC,MAAM;aACH,KAAK,CAAC,cAAc,CAAC;aACrB,GAAG,CAAC,oCAAgB,CAAC,MAAM,CAAC,CAAC;QAEhC,MAAM;aACH,KAAK,CAAC,kBAAkB,CAAC;aACzB,GAAG,CAAC,oCAAgB,CAAC,SAAS,CAAC,CAAC;IACrC,CAAC;IACH,mBAAC;AAAD,CAAC,AAVD,IAUC;AAVY,oBAAY,eAUxB,CAAA"}

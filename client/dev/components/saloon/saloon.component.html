@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-12" *ngIf="saloons.length">
+    <md-card *ngFor="let saloon of saloons" style="margin-top:20px">
+      <md-card-subtitle>{{saloon._id}}</md-card-subtitle>
+      <md-card-title>{{saloon.name}}</md-card-title>
+      <md-card-content>
+        <p>{{saloon.service.name}}</p>
+
+      </md-card-content>
+      <md-card-actions>
+        <button routerLink="/saloon/{{saloon._id}}" md-icon-button class="md-icon-button" aria-label="Favorite">
+          <i class="material-icons">present_to_all</i>
+        </button>
+      </md-card-actions>
+    </md-card>
+  </div>
+</div>

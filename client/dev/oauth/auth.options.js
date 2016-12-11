@@ -1,4 +1,4 @@
 "use strict";
 exports.options = {
-    language: 'ru'
+    language: 'ru',
 };
