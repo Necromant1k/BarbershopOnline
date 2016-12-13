@@ -17,14 +17,15 @@ import { ProfileComponent } from "./components/profile/profile.component";
 import { SaloonComponent } from './components/saloon/saloon.component';
 import { SaloonService } from './services/saloon/saloon.service';
 import { SingleSaloonComponent} from './components/single.saloon/saloonSingle.component';
-
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { SlickSliderComponent } from './components/slick-slider/slick-slider.component';
 @NgModule({
     imports: [
       BrowserModule,
       routing,
       FormsModule,
       HttpModule,
-      MaterialModule
+      MaterialModule.forRoot()
     ],
    declarations: [
       AppComponent,
@@ -32,8 +33,10 @@ import { SingleSaloonComponent} from './components/single.saloon/saloonSingle.co
       NavbarComponent,
       ProfileComponent,
       SaloonComponent,
-      SingleSaloonComponent
-    ],
+      SingleSaloonComponent,
+      MainPageComponent,
+      SlickSliderComponent
+   ],
     providers: [
       TodoService,
       AUTH_PROVIDERS,

@@ -6,7 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <link rel="shortcut icon" type="image/ico" href="favicon.png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
     <!-- Load the Angular Material 2 stylesheet -->
     <link href="https://unpkg.com/@angular/material/core/theming/prebuilt/indigo-pink.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
@@ -15,14 +22,18 @@
   </head>
   <body>
     <base href="/">
-    <main-barbershop></main-barbershop>
+    <main-barbershop>
+      <div class="spinner">
+        <img src="./spinner.gif">
+      </div>
+    </main-barbershop>
 
     <script src="https://cdn.auth0.com/js/lock/10.6.1/lock.min.js"></script>
     <script src="./systemjs/dist/system.js?rev=@@hash"></script>
     <script src="./reflect-metadata/Reflect.js?rev=@@hash"></script>
     <script src="./zone.js/dist/zone.js?rev=@@hash"></script>
     <script src="./config.js?rev=@@hash"></script>
-
+    <script src="assets/plugins/owl-carousel/js/owl.carousel.min.js"></script>
 
     <script>
       System.import("./index.js");

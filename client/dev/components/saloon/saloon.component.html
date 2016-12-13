@@ -1,17 +1,34 @@
-<div class="row">
-  <div class="col-md-12" *ngIf="saloons.length">
-    <md-card *ngFor="let saloon of saloons" style="margin-top:20px">
-      <md-card-subtitle>{{saloon._id}}</md-card-subtitle>
-      <md-card-title>{{saloon.name}}</md-card-title>
-      <md-card-content>
-        <p>{{saloon.service.name}}</p>
-
-      </md-card-content>
-      <md-card-actions>
-        <button routerLink="/saloon/{{saloon._id}}" md-icon-button class="md-icon-button" aria-label="Favorite">
-          <i class="material-icons">present_to_all</i>
-        </button>
-      </md-card-actions>
-    </md-card>
+<div class="page-header">
+  <h1>Салоны красоты</h1>
+  <h2 class="pink">Стиль – вопрос индивидуальности. </h2>
+</div>
+<div class="salons-container">
+  <div class="container">
+    <div class="salons-items" *ngIf="saloons.length">
+      <div class="custom-card" *ngFor="let salon of saloons; let i = index;" md-ripple md-ripple-color="rgba(248, 187, 208, .35)">
+        <img src="../../assets/images/salon-{{i+1}}.jpg" alt="">
+        <div class="custom-card-header">
+          <div class="inline-button">
+            <button md-icon-button><md-icon>favorite_border</md-icon></button>
+            <span>10</span>
+          </div>
+          <div class="inline-button">
+            <button md-icon-button><md-icon>star_border</md-icon></button>
+            <span>4.5</span>
+          </div>
+        </div>
+        <div class="custom-card-footer">
+          <div class="short-info-salon">
+            <span class="block salon-name">
+            {{salon.name}}
+          </span>
+          <span class="block salon-address">
+            ул. Советская 131
+          </span>
+          </div>
+          <button md-icon-button routerLink="/saloon/{{salon._id}}"><md-icon>arrow_forward</md-icon></button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

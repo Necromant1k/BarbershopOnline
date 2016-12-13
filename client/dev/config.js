@@ -23,7 +23,8 @@ System.config({
     'rxjs':                       'npm:rxjs',
     '@angular/material':          'npm:@angular/material/material.umd.js',
     'angular2-jwt': 'npm:angular2-jwt/angular2-jwt.js',
-    "ng2-material":"https://cdn.rawgit.com/justindujardin/ng2-material/gh-pages/v/0.2.8/ng2-material"
+    "ng2-material":"https://cdn.rawgit.com/justindujardin/ng2-material/gh-pages/v/0.2.8/ng2-material",
+    "jquery": "npm:jquery/dist/jquery.js"
 
 
   },

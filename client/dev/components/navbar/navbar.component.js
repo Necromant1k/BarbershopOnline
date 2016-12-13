@@ -13,6 +13,8 @@ var auth_service_1 = require('../../oauth/auth.service');
 var NavbarComponent = (function () {
     function NavbarComponent(auth) {
         this.auth = auth;
+        this.profile = JSON.parse(localStorage.getItem('profile'));
+        console.log(this.profile);
     }
     NavbarComponent = __decorate([
         core_1.Component({

@@ -25,6 +25,8 @@ var profile_component_1 = require("./components/profile/profile.component");
 var saloon_component_1 = require('./components/saloon/saloon.component');
 var saloon_service_1 = require('./services/saloon/saloon.service');
 var saloonSingle_component_1 = require('./components/single.saloon/saloonSingle.component');
+var main_page_component_1 = require('./components/main-page/main-page.component');
+var slick_slider_component_1 = require('./components/slick-slider/slick-slider.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -35,7 +37,7 @@ var AppModule = (function () {
                 app_routing_1.routing,
                 forms_1.FormsModule,
                 http_1.HttpModule,
-                material_1.MaterialModule
+                material_1.MaterialModule.forRoot()
             ],
             declarations: [
                 app_component_1.AppComponent,
@@ -43,7 +45,9 @@ var AppModule = (function () {
                 navbar_component_1.NavbarComponent,
                 profile_component_1.ProfileComponent,
                 saloon_component_1.SaloonComponent,
-                saloonSingle_component_1.SingleSaloonComponent
+                saloonSingle_component_1.SingleSaloonComponent,
+                main_page_component_1.MainPageComponent,
+                slick_slider_component_1.SlickSliderComponent
             ],
             providers: [
                 todo_service_1.TodoService,

@@ -5,9 +5,14 @@ var todo_cmp_1 = require("./todo/components/todo-cmp");
 var profile_component_1 = require("./components/profile/profile.component");
 var saloon_component_1 = require("./components/saloon/saloon.component");
 var saloonSingle_component_1 = require('./components/single.saloon/saloonSingle.component');
+var main_page_component_1 = require("./components/main-page/main-page.component");
 var appRoutes = [
     {
         path: '',
+        component: main_page_component_1.MainPageComponent
+    },
+    {
+        path: 'saloons',
         component: saloon_component_1.SaloonComponent
     },
     {

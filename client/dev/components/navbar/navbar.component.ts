@@ -8,7 +8,10 @@ import {Auth} from '../../oauth/auth.service';
 })
 
 export class NavbarComponent{
-  constructor(private auth: Auth){
+  profile: any;
 
+  constructor(private auth: Auth){
+    this.profile = JSON.parse(localStorage.getItem('profile'));
+    console.log(this.profile);
   }
 }

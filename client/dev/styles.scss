@@ -1,10 +1,436 @@
+@import "styles/palette";
+@import "styles/figures-plate";
+@import "styles/fonts";
+
 body{
   background-color: #fff;
 }
 *{
   outline: none !important;
 }
+.block{
+  display: block;
+}
+.hidden{
+  display: none;
+}
 .profile-card{
   max-width: 420px;
   margin:0 auto;
+}
+.gray{
+  color: $secondary-text-color;
+}
+.spinner{
+  position: relative;
+  height: 100vh;
+  img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  background-color: #000;
+}
+a{
+  text-decoration: none !important;
+}
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.md-overlay-pane{
+
+}
+.no-paddings{
+  padding: 0 !important;
+}
+.header-menu{
+  z-index:10;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  min-height:50px;
+  padding:15px 45px;
+  position: relative;
+
+  ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    li{
+      padding:0 25px;
+      display: flex;
+      cursor: pointer;
+      a{
+        &:hover{
+          color: $primary-color;
+        }
+        md-icon{
+          margin-left: 5px;
+        }
+        font-weight: 400;
+        transition: color linear 0.25s;
+        display: flex;
+        align-items: center;
+        color: #ff80ab;
+        font-size:18px;
+      }
+    }
+  }
+}
+.full-width{
+  //background: url('assets/images/homeslide_5.jpg');
+  width: 100%;
+  height:100vh;
+  margin-top: -70px;
+
+  /* The image used */
+  background-image: url("assets/images/homeslide_5.jpg");
+
+  /* Full height */
+ // height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.profile-navbar{
+  img{
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    margin-right: 5px;
+  }
+}
+.logo-custom{
+  margin-right:25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size:0.75rem !important;
+  text-transform: uppercase;
+  font-weight:500;
+  img{
+    height: 35px;
+  }
+}
+
+//-- Main page title content
+.main-content{
+  position: absolute;
+  left: 50px;
+  bottom: 25%;
+  transition: opacity linear 0.3s;
+}
+.city{
+  font-weight: 100;
+  font-size:18px;
+  margin-top: 25px;
+}
+.main-title{
+  font-weight:100;
+  font-size:64px;
+  line-height: 64px;
+}
+.pink{
+  color: $primary-color;
+}
+.arrow-down{
+  position: absolute;
+  margin-top: 140px;
+  md-icon{
+    font-size: 24px;
+  }
+}
+
+//-- Main page who we are
+
+.section-header{
+  padding:50px 0;
+  background-color: #fff;
+  text-align: center;
+  h2{
+    font-size: 32px;
+    font-weight: 100;
+    line-height: 38px;
+  }
+  h3{
+    color: $primary-color;
+    font-size:18px;
+    font-weight: 100;
+    line-height: 38px;
+  }
+}
+.who-we-are-body{
+  margin-top: 100px;
+  md-card-title{
+    margin-bottom: 0;
+  }
+  h4{
+    padding:25px 25px 0 25px;
+    margin: 0;
+  }
+  h5{
+    margin: 0;
+    padding:10px 25px;
+  }
+  p{
+    font-weight: 300;
+    font-size: 16px;
+    padding:0 25px 25px 25px;
+  }
+}
+.who-we-are{
+  background-color: $gray-color;
+}
+h4{
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 400;
+}
+h5{
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+//-- popular items section
+.inline-link{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size:12px;
+  margin-right: 25px;
+}
+.popular-saloons{
+  background-color: $gray-color;
+}
+.popular-saloons-items{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top:100px;
+}
+.show-all-saloons{
+  display: flex;
+  justify-content: center;
+  button{
+    &:hover{
+      transition: 0.2s linear;
+    }
+    md-icon{
+      font-size:initial;
+    }
+    font-size:16px;
+    color: $accent-color;
+    display: flex;
+    align-items: center;
+  }
+  padding:45px 0;
+  text-align: center;
+}
+.popular-saloons-item{
+  width:calc(100% / 3);
+  img{
+    max-width: 100%;
+  }
+}
+
+//-- our discounts
+
+.our-discounts{
+  background-image: url("assets/images/bg-discount-2.jpg");
+  height: 40vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.25);
+  }
+}
+.discount-image{
+  img{
+    max-width:320px;
+  }
+}
+
+.discount-plate{
+  background: #fff;
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  a{
+    color: $primary-text-color;
+    transition: 0.25s linear;
+    &:hover{
+      color: $primary-color-light;
+    }
+  }
+  img{
+    width:320px;
+  }
+  .salon-name{
+    color: $primary-color;
+    font-family:'Monplesirscript';
+    font-size: 32px;
+    margin-bottom:10px;
+  }
+}
+.discount-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.divider-stars{
+  margin:10px 0;
+  height:8px;
+  width:64px;
+  background: url('assets/images/stars.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+//-- salons page
+.salons-container{
+  padding:50px 0;
+  background-color: #fff;
+}
+.salons-items{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  .custom-card{
+    position: relative;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover{
+      .custom-card-header{
+        opacity: 1;
+      }
+    }
+    img{
+      max-height: 225px;
+      min-height: 225px;
+      max-width: 100%;
+      width: 100%;
+    }
+    width:calc((100% / 3) - 10px);
+  }
+}
+.short-info-salon{
+  color: $primary-color-text;
+  .salon-name{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .salon-address{
+    font-size:12px;
+    line-height: 12px;
+  }
+}
+.custom-card-footer{
+  padding:5px 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+  background: rgba(0,0,0,.25);
+  button{
+    color: #fff;
+  }
+}
+.custom-card-header{
+  transition: opacity linear 0.3s;
+  opacity: 1;
+  padding:5px 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .inline-button{
+    margin-right:25px;
+    display: flex;
+    align-items: center;
+    font-size:14px;
+    color: #fff;
+  }
+  md-icon{
+    font-size: 18px;
+    color: #fff;
+  }
+}
+.overlay{
+  width: 100%;
+  height: 45vh;
+  background: rgba(0,0,0,.25);
+  z-index:1;
+  position: absolute;
+}
+//-- page header
+.page-header{
+  height:45vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("assets/images/woman_red_hair.png");
+  background-position: 75% center;
+  background-repeat: no-repeat;
+  margin-top: -70px;
+  background-color: $gray-color;
+  background-size: contain;
+  &.saloon-page-header{
+    h1{
+      color: #fff;
+    }
+    background-attachment: fixed;
+    background-position: center 150%;
+    background-repeat: no-repeat;
+    margin-top: -70px;
+    background-color: $gray-color;
+    background-size: cover;
+  }
+  h1{
+    z-index:9;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 300;
+  }
+  h2{
+    font-size: 20px;
+    font-weight: 300;
+  }
 }
