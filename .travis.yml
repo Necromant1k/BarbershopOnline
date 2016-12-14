@@ -3,6 +3,9 @@ language: node_js
 node_js:
   - "5"
 
+before_install:
+  - npm install -g typings
+
 before_script:
   - npm install -g bower gulp-cli mocha
   - npm run-script test-on-travis
