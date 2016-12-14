@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { FormsModule, FormBuilder } from '@angular/forms';
+import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule  } from '@angular/platform-browser';
 import { MaterialModule } from '@angular/material';
 import {AUTH_PROVIDERS} from 'angular2-jwt';
@@ -19,13 +19,18 @@ import { SaloonService } from './services/saloon/saloon.service';
 import { SingleSaloonComponent} from './components/single.saloon/saloonSingle.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { SlickSliderComponent } from './components/slick-slider/slick-slider.component';
+import { FormValidationComponent } from './components/form-validation/validation.component';
+import { MyDatePickerModule } from 'mydatepicker/dist/my-date-picker.module';
+
 @NgModule({
     imports: [
       BrowserModule,
       routing,
       FormsModule,
       HttpModule,
-      MaterialModule.forRoot()
+      MaterialModule.forRoot(),
+      ReactiveFormsModule,
+      MyDatePickerModule
     ],
    declarations: [
       AppComponent,
@@ -35,9 +40,13 @@ import { SlickSliderComponent } from './components/slick-slider/slick-slider.com
       SaloonComponent,
       SingleSaloonComponent,
       MainPageComponent,
-      SlickSliderComponent
+      SlickSliderComponent,
+      FormValidationComponent,
+
+
    ],
     providers: [
+      FormBuilder,
       TodoService,
       AUTH_PROVIDERS,
       Auth,

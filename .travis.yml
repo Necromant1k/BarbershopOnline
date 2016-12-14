@@ -9,8 +9,9 @@ before_install:
 install:
   - npm install
   - typings install
-  
+
 before_script:
+  - tsc
   - npm install -g bower gulp-cli mocha
   - npm run-script test-on-travis
   - bower install

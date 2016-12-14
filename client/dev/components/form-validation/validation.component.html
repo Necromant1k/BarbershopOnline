@@ -1,0 +1,22 @@
+<form [formGroup]="complexForm" (ngSubmit)="submitForm(complexForm.value)" class="appointment-form">
+  <div class="col-md-7">
+    <div class="input-group" [ngClass]="{'has-error':!complexForm.controls['firstName'].valid && complexForm.controls['firstName'].touched}">
+      <md-input dividerColor='accent' placeholder="Имя" [formControl]="complexForm.controls['firstName']"></md-input>
+      <md-input dividerColor='accent' placeholder="Электронный адрес" [formControl]="complexForm.controls['email']"></md-input>
+      <md-input dividerColor='accent' placeholder="Контактный телефон" [formControl]="complexForm.controls['phone']"></md-input>
+      <div class="input-group-two">
+        <md-input dividerColor="accent" placeholder="Дата" [formControl]="complexForm.controls['date']">
+        </md-input>
+        <my-date-picker [options]="myDatePickerOptions" ></my-date-picker>
+        <md-select dividerColor="accent"  placeholder="Время" [formControl]="complexForm.controls['time']">
+          <md-option *ngFor="let time of ['12:00', '13:00', '14:00']" [value]="time">{{time}}</md-option>
+        </md-select>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <md-textarea rows="6" placeholder="Комментарий"></md-textarea>
+  </div>
+  <button md-raised-button color="accent" type="submit"  [disabled]="!complexForm.valid">Записаться <md-icon>send</md-icon></button>
+</form>
+
