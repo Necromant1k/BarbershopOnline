@@ -1,0 +1,281 @@
+.mydp {
+  font-family:'Roboto' !important;
+  margin-top: 25px;
+  border-radius: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid #ccc !important;
+  line-height: inherit !important;
+}
+.mydp .caltable{
+  font-family: Roboto !important;
+}
+.mydp .caltable .currmonth{
+  font-family: Roboto !important;
+}
+.mydp th .weekdaytitle{
+  font-family: Roboto !important;
+
+}
+.mydp .selector {
+  width: 314px !important;
+  background-color: transparent !important;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+}
+
+
+.mydp .selectiongroup {
+  background-color: #FFF
+}
+
+.mydp .selection {
+  margin-right: 15px;
+  background-color: #FFF;
+  font-weight: 300 !important;
+  font-size: 16px !important ;
+  text-align: left !important;
+}
+
+.mydp .invaliddate,
+.mydp .invalidmonth,
+.mydp .invalidyear {
+  background-color: #fff !important;
+  color: red !important;
+}
+.mydp .headerbtncell button {
+  margin-top: 0;
+}
+.mydp table.header{
+  background-color: #fff !important;
+}
+
+.mydp .btnclear,
+.mydp .btnpicker,
+.mydp .headertodaybtn {
+  background: #FFF
+}
+
+.mydp .header {
+  width: 100%;
+  height: 44px;
+  margin-bottom: 1px;
+  background-color: #FAFAFA
+}
+
+.mydp td.selectedday div {
+  background-color: rgb(16,108,200) !important;
+}
+.mydp .currday div{
+  border: 1px solid rgb(16,108,200) !important;
+  border-radius: 50%;
+}
+
+
+.mydp .caltable,
+.mydp .daycell,
+.mydp .weekdaytitle {
+  border-collapse: collapse;
+  height: 44px !important;
+  width: 44px !important;
+  text-align: center;
+  padding: 0 !important;
+  border: none !important;
+  font-size: 13px !important;
+  color: rgba(0,0,0,0.87) !important;
+  font-weight: 400 !important;
+  line-height: 40px !important;
+}
+
+.mydp .weekdaytitle {
+  background-color: rgb(224,224,224);;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.mydp .daycell {
+  cursor: pointer;
+  height: 44px
+}
+
+.mydp .daycell div {
+  background-color: inherit;
+  vertical-align: middle
+}
+
+.mydp .daycell div span {
+  vertical-align: middle
+}
+
+.mydp .inlinedp {
+  position: relative
+}
+
+.mydp .nextmonth,
+.mydp .prevmonth {
+  color: #CCC
+}
+
+.mydp .disabled {
+  cursor: default!important;
+  color: #CCC!important;
+  background: #FBEFEF!important
+}
+
+.mydp .sunday {
+  color:rgba(0,0,0,0.87) !important;
+}
+
+.mydp .sundayDim {
+  opacity: 1 !important;
+}
+
+.mydp .currmonth {
+  background-color: transparent !important;
+  font-weight: 400 !important
+}
+.mydp .selectedday div{
+  background: rgb(16,108,200) !important;
+  color: rgba(255,255,255,0.87) !important;
+  border-color: transparent !important;
+  border-radius: 100% !important;
+}
+.mydp .selectedday {
+
+  background-color: transparent !important;
+  -webkit-transition: background-color,color .4s cubic-bezier(.25,.8,.25,1);
+  transition: background-color,color .4s cubic-bezier(.25,.8,.25,1);
+  border-radius: 50%;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.mydp .selectmenu {
+  height: 24px;
+  width: 60px
+}
+
+.mydp div.headerbtncell {
+  background-color: #fff !important;
+  cursor: pointer
+}
+
+.mydp .headerbtn,
+.mydp .headerlabelbtn {
+  border: none;
+  height: auto !important
+}
+
+.mydp .btnclear, .mydp .btnpicker{
+  border: 0 !important;
+}
+.mydp .selection{
+  bottom: 1px;
+  height:auto !important;
+line-height:inherit !important;
+}
+.mydp .btnclear,
+.mydp .btnpicker,
+.mydp .headerbtn,
+.mydp .headermonthtxt,
+.mydp .headertodaybtn,
+.mydp .headeryeartxt,
+.mydp .selection {
+  color: #000
+}
+.mydp .headermonthtxt button{
+  float: none;
+  margin-top: 0;
+  text-transform: uppercase;
+  font-weight: 300 !important;
+}
+.mydp .headeryeartxt button{
+  float: none;
+  margin-top: 0;
+  font-weight: 300 !important;
+}
+.mydp .headertodaybtn {
+  padding: 0 4px;
+  border-radius: 2px;
+  font-size: 11px;
+  min-width: 60px;
+  height: 22px
+}
+
+.mydp .headermonthtxt,
+.mydp .headeryeartxt {
+  min-width: 40px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 14px
+}
+
+.mydp .btnclear:focus,
+.mydp .btnpicker:focus,
+.mydp .headertodaybtn:focus {
+  background: #fff !important;
+}
+
+.mydp .headerbtn:focus,
+.mydp .monthlabel:focus,
+.mydp .yearlabel:focus {
+  color: #000 !important;
+  outline: 0
+}
+
+.mydp .daycell:focus {
+  outline: none !important
+}
+
+.mydp .btnclearenabled:hover,
+.mydp .btnpickerenabled:hover,
+.mydp .headertodaybtnenabled:hover,
+.mydp .tablesingleday:hover {
+  background: rgb(224,224,224) !important;
+  -webkit-transition: background-color,color .4s cubic-bezier(.25,.8,.25,1);
+  transition: background-color,color .4s cubic-bezier(.25,.8,.25,1);
+  border-radius: 50%;
+}
+.mydp .header *{
+}
+.mydp .header{
+  height: 44px !important;
+}
+.mydp .headerbtn:hover,
+.mydp .monthlabel:hover,
+.mydp .yearlabel:hover {
+  color: #000 !important
+}
+
+.mydp .icon {
+  font-family: mydatepicker;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+
+}
+
+.mydp .icon-calendar:before {
+  color: #757575;
+  content: "\\e600"
+}
+
+.mydp .icon-cross:before {
+  color: #757575;
+  content: "x"
+}
+
+.mydp .icon-left:before {
+  color: #757575;
+  content: "<"
+}
+
+.mydp .icon-right:before {
+  color: #757575;
+  content: "\f105"
+}

@@ -1,7 +1,7 @@
 @import "styles/palette";
 @import "styles/figures-plate";
 @import "styles/fonts";
-
+@import "styles/datepicker";
 body{
   background-color: #fff;
 }
@@ -583,7 +583,7 @@ h5{
   md-textarea{
     width: 100%;
   }
-  button{
+  button[type='submit']{
     float: right;
     margin-top: 15px;
     md-icon{
@@ -607,6 +607,10 @@ h5{
     justify-content:space-between;
     align-items: center;
     md-input, md-select{
+      &:first-child{
+        margin-left: 0;
+      }
+      margin-left: 25px;
       padding-top: 25px;
       width: calc((100% / 2) - 15px)
     }

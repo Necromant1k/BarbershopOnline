@@ -11,9 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var saloon_service_1 = require('../../services/saloon/saloon.service');
 var SaloonComponent = (function () {
-    function SaloonComponent(_saloonService) {
+    function SaloonComponent(_saloonService, _compiler) {
         this._saloonService = _saloonService;
+        this._compiler = _compiler;
         this.saloons = [];
+        this._compiler.clearCache();
     }
     SaloonComponent.prototype.ngOnInit = function () {
         this._getAll();
@@ -31,7 +33,7 @@ var SaloonComponent = (function () {
             selector: 'saloon',
             templateUrl: 'saloon.component.html'
         }), 
-        __metadata('design:paramtypes', [saloon_service_1.SaloonService])
+        __metadata('design:paramtypes', [saloon_service_1.SaloonService, core_1.Compiler])
     ], SaloonComponent);
     return SaloonComponent;
 }());

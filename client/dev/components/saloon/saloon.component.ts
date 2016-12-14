@@ -1,5 +1,4 @@
-import {  Component, Inject, OnInit } from '@angular/core';
-
+import {  Component, Inject, OnInit, Compiler } from '@angular/core';
 
 import {SaloonService} from '../../services/saloon/saloon.service';
 
@@ -18,7 +17,8 @@ export class SaloonComponent implements OnInit{
   title: "Салоны красоты";
   saloons : Saloon[] = [];
 
-  constructor(private _saloonService: SaloonService){
+  constructor(private _saloonService: SaloonService, private _compiler: Compiler){
+    this._compiler.clearCache();
 
   }
 
