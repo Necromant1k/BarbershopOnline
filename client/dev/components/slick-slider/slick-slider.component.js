@@ -28,7 +28,7 @@ var SlickSliderComponent = (function () {
     SlickSliderComponent = __decorate([
         core_1.Component({
             selector: 'slick-slider',
-            template: "\n        <ng-content></ng-content>\n    "
+            template: "<ng-content></ng-content>"
         }), 
         __metadata('design:paramtypes', [core_1.ElementRef])
     ], SlickSliderComponent);

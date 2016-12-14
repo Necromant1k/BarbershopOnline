@@ -4,9 +4,7 @@ import 'slick-carousel/slick/slick';
 
 @Component({
   selector: 'slick-slider',
-  template: `
-        <ng-content></ng-content>
-    `
+  template: `<ng-content></ng-content>`
 })
 export class SlickSliderComponent implements AfterContentInit{
   @Input() options: any;
